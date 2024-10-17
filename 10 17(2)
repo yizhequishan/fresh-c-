@@ -1,0 +1,39 @@
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+
+
+int main() {
+	int x, xiaoA = 0, Uim = 0, xiaoB = 0, zhengmei = 0;
+	int xingzhi1 = 0, xingzhi2 = 0;
+	std::cin >> x;
+	if (x % 2 == 0) {
+		xingzhi1 = 1;
+	}
+	else {
+		xingzhi1 = 0;
+	}
+	if (x > 4 && x <= 12) {
+		xingzhi2 = 1;
+	}
+	else {
+		xingzhi2 = 0;
+	}
+	if (xingzhi1 == 1 && xingzhi2 == 1) {
+		xiaoA = 1;
+	}
+	if (xingzhi1 == 1 || xingzhi2 == 1) {
+		Uim = 1;
+	}
+	if (xingzhi1 == 1 && xingzhi2 == 0) {
+		xiaoB = 1;
+
+	}
+	if (xingzhi1 == 0 && xingzhi2 == 1) {
+		xiaoB = 1;
+	}
+	if (xingzhi1 == 0 && xingzhi2 == 0) {
+		zhengmei = 1;
+	}
+	std::cout << xiaoA << " " << Uim << " " << xiaoB << " " << zhengmei;
+}
